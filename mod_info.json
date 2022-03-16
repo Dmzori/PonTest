@@ -1,0 +1,12 @@
+{
+  "id":"Pon Test Mod", 
+	"name":"Pon Test", 
+	"author":"Domzori",
+	"version":".1",
+	"description":"Testing systems for eventual pony mod",
+    "gameVersion": "0.95a-RC15",
+	"jars":[
+      "jars/PonTestProject.jar",
+	],
+    
+}
