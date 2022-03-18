@@ -1,0 +1,4 @@
+name,id,hotkey,inTime,activeTime,outTime,cooldownTime,isToggle,fluxPerSecondPercentMaxCapacity,fluxPerSecondFlat
+Mjets Spell,Pon_Spell1,,0.5,4,0.3,4,,3,
+#Ammo Feeder,accammo,,3,3,3,3,,0.5,0
+#Phaze Cloak,pcloak,,0.5,,0.5,2,TRUE,0,0
