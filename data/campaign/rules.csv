@@ -1,0 +1,7 @@
+id,trigger,conditions,script,text,options,notes
+equestrian_celestia_1_opening,PopulateOptions,"$isPerson
+$name == Celestia",,,equestrian_celestia_1_opened:Greet the Princess,
+equestrian_celestia_1_1,DialogOptionSelected,$option == equestrian_celestia_1_opened,EquestriaDialogManager,"""WHINNY WHINNY WHINNY WHINNY WHINNY NEIGH NEIGH WHINNY WHINNY WHINNY NEIGH NEIGH NEIGH WHINNY.""",,
+equestrian_planet_interaction,OpenInteractionDialog,$id == equestrian_alpha score:90000,ShowDefaultVisual,,,
+,,,,,,
+,,,,,,

@@ -18,5 +18,5 @@
 			"name":"DroneLib",
 		},
 	],
-    
+    "modPlugin": "data.scripts.EquestriaMoonPlugin"
 }
