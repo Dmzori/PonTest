@@ -38,23 +38,26 @@ public class Pon_Spell2_Subsystem extends dl_BaseSubsystem
         float shieldArc = ship.getHullSpec().getShieldSpec().getArc();//ships original shield arc
         Color innerShieldColor = ship.getHullSpec().getShieldSpec().getInnerColor();//ships original inner shield color
         Color ringShieldColor = ship.getHullSpec().getShieldSpec().getRingColor();//ships original ring color
-        Color activeShieldColor = new Color(0, 255, 0);//lime green 
-        //Global.getSoundPlayer().
+        Color activeShieldColor = new Color(0, 100, 0);//inner shield color
+        Color activeRingShieldColor = new Color(200, 200, 200);//outer ring color
+        //Global.getSoundPlayer().playLoop(id, index, shieldArc, shieldArc, loc, vel);
         
         stats.getShieldTurnRateMult().modifyMult(id, 1f);
-        stats.getShieldUnfoldRateMult().modifyPercent(id, 200);//2000 originally
+        stats.getShieldUnfoldRateMult().modifyPercent(id, 150);//2000 originally
         stats.getShieldDamageTakenMult().modifyMult(id, 1f - DAMAGE_MULT * effectLevel);
 	stats.getShieldDamageTakenMult().modifyMult(id, 0.1f);
         stats.getShieldUpkeepMult().modifyMult(id, 0f);
-        ship.getShield().setArc(360f);
+        //ship.getShield().setArc(360f);
         if(isActive() || isFadingIn()){
             ship.getShield().toggleOn();
             ship.getShield().setArc(360f);
             ship.getShield().setInnerColor(activeShieldColor);
+            ship.getShield().setRingColor(activeRingShieldColor);
         }else if (isFadingOut()){
-            ship.getShield().toggleOff();
+            //ship.getShield().toggleOff();
             ship.getShield().setArc(shieldArc);
             ship.getShield().setInnerColor(innerShieldColor);
+            ship.getShield().setRingColor(ringShieldColor);
             
         }
         
@@ -75,7 +78,7 @@ public class Pon_Spell2_Subsystem extends dl_BaseSubsystem
             weapon.setRemainingCooldownTo(0.0f);
         }*/
         if(isFadingOut()){
-        ship.getShield().toggleOff();
+        //ship.getShield().toggleOff();
         ship.getShield().setArc(shieldArc);
         }
         stats.getShieldArcBonus().unmodify(id);
